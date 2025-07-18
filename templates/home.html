@@ -1425,11 +1425,11 @@ def allowed_file(filename):
 
                 <h3 class="text-2xl font-medium mt-6 mb-3">3. معالجة رفع الملفات في Flask:</h3>
                 <p class="mb-4 text-lg leading-relaxed">
-                    سنضيف مساراً جديداً في <code>{% raw %}app.py{% raw %}</code> للتعامل مع رفع الملفات.
+                    سنضيف مساراً جديداً في <code>{% raw %}app.py{% endraw %}</code> للتعامل مع رفع الملفات.
                 </p>
                 <div class="code-block-container">
                     <button class="copy-button" onclick="copyCode(this, 'code-app-uploads-route')">نسخ الكود</button>
-                    <pre><code class="language-python" id="code-app-uploads-route">{% raw %}# app.py (أضف هذا المسار الجديد)
+                    <pre><code class="language-python" id="code-app-uploads-route">{% raw %} # app.py (أضف هذا المسار الجديد)
 
 # ... (الكود السابق، بما في ذلك إعدادات UPLOAD_FOLDER و ALLOWED_EXTENSIONS ودالة allowed_file) ...
 
@@ -1563,11 +1563,11 @@ if __name__ == '__main__':
                     <br>
                     <code class="language-python color-scode">{% raw %}app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'{% endraw %}</code>: يحدد أننا نستخدم قاعدة بيانات SQLite وأن ملف قاعدة البيانات سيسمى <code>{% raw %}site.db{% endraw %}</code> وسيتم إنشاؤه في جذر المشروع.
                     <br>
-                    <code class="language-python">{% raw %}db = SQLAlchemy(app){% raw %}</code>: ينشئ كائن SQLAlchemy ويربطه بتطبيق Flask الخاص بنا.
+                    <code class="language-python">{% raw %}db = SQLAlchemy(app){% enraw %}</code>: ينشئ كائن SQLAlchemy ويربطه بتطبيق Flask الخاص بنا.
                     <br>
                     <code class="language-python">{% raw %}class User(db.Model):{% endraw %}</code>: هذا هو تعريف نموذج المستخدم. كل كلاس يرث من <code class="language-python">{% raw %}db.Model{% endraw %}</code> يمثل جدولاً في قاعدة البيانات.
                     <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;- <code class="language-python">{% raw %}db.Column(...){% raw %}</code>: يمثل عموداً في الجدول.
+                    &nbsp;&nbsp;&nbsp;&nbsp;- <code class="language-python">{% raw %}db.Column(...){% endraw %}</code>: يمثل عموداً في الجدول.
                     <br>
                     &nbsp;&nbsp;&nbsp;&nbsp;- <code class="language-python">{% raw %}db.Integer, primary_key=True{% endraw %}</code>: عمود المعرف، وهو مفتاح أساسي ويتزايد تلقائياً.
                     <br>
